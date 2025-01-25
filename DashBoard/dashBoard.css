@@ -1,0 +1,153 @@
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #DFA0BE, #7028E4); /* Gradient Background */
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.logoimage{
+  width:50px;
+  height:50px;
+  border-radius: 25px;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #DFA0BE;
+}
+
+.navbar .search-bar {
+  flex: 1;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .search-bar input {
+  padding: 8px 10px;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.navbar .profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar .profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar .profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  width: 150px;
+}
+
+.navbar .profile-dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.navbar .profile-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.navbar .profile-dropdown a:hover {
+  background: #f4f4f4;
+}
+
+.navbar .profile:hover .profile-dropdown {
+  display: flex;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .navbar .search-bar {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .search-bar input {
+    max-width: 100%;
+  }
+}

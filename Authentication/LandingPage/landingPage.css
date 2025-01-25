@@ -1,0 +1,119 @@
+
+    /* General Styles */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Background Gradient */
+    .landing-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background: linear-gradient(135deg, #DFA0BE, #7028E4);
+      /* Gradient Background */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Quote Section */
+    .content {
+      max-width: 600px;
+      padding: 10px;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #7028E4;
+      /* Button Background */
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #DFA0BE;
+      /* Button Hover Background */
+      color: white;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+
+      /* Tablet */
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      /* Mobile */
+      .content h1 {
+        font-size: 1.8rem;
+      }
+
+      .content p {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+
+      /* Large Screens */
+      .content h1 {
+        font-size: 3rem;
+      }
+
+      .content p {
+        font-size: 1.5rem;
+      }
+    }
+  
