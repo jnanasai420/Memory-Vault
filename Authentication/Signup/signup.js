@@ -1,4 +1,3 @@
-// export { email, password };
 let formSubmittion = document.querySelector("form");
 formSubmittion.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -32,4 +31,3 @@ formSubmittion.addEventListener("submit", (event) => {
     window.location.href = "../Login/login.html"; // Redirect to the login page
   });
 });
-// export { email, password };
