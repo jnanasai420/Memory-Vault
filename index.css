@@ -1,119 +1,120 @@
+/* Import the Bodoni Moda font from Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap");
 
-    /* General Styles */
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Arial', sans-serif;
-    }
+General Styles */
+body,
+html {
+  font-family: "Bodoni Moda", "Arial", sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
 
-    /* Background Gradient */
-    .landing-page {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      background: linear-gradient(135deg, #DFA0BE, #7028E4);
-      /* Gradient Background */
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+/* Background Gradient */
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(135deg, #dfa0be, #7028e4);
 
-    /* Quote Section */
-    .content {
-      max-width: 600px;
-      padding: 10px;
-    }
+  /* background-image: url(http://www.memoryvault.org/Images/rawpixel-com-600791-unsplash.jpg); */
 
-    .content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
+  /* Gradient Background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-    .content p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
+/* Quote Section */
+.content {
+  max-width: 600px;
+  padding: 10px;
+}
 
-    /* Buttons */
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    .btn {
-      padding: 12px 30px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #fff;
-      background: #7028E4;
-      /* Button Background */
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-      text-decoration: none;
-    }
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
 
-    .btn:hover {
-      background: #DFA0BE;
-      /* Button Hover Background */
-      color: white;
-    }
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-    /* Media Queries */
-    @media (max-width: 768px) {
+.btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #7028e4;
+  /* Button Background */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
 
-      /* Tablet */
-      .content h1 {
-        font-size: 2rem;
-      }
+.btn:hover {
+  background: #dfa0be;
+  /* Button Hover Background */
+  color: white;
+}
 
-      .content p {
-        font-size: 1rem;
-      }
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Tablet */
+  .content h1 {
+    font-size: 2rem;
+  }
 
-      .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-    }
+  .content p {
+    font-size: 1rem;
+  }
 
-    @media (max-width: 480px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
 
-      /* Mobile */
-      .content h1 {
-        font-size: 1.8rem;
-      }
+@media (max-width: 480px) {
+  /* Mobile */
+  .content h1 {
+    font-size: 1.8rem;
+  }
 
-      .content p {
-        font-size: 0.9rem;
-      }
+  .content p {
+    font-size: 0.9rem;
+  }
 
-      .btn {
-        padding: 8px 18px;
-        font-size: 0.8rem;
-      }
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
 
-      .buttons {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 
-    @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  /* Large Screens */
+  .content h1 {
+    font-size: 3rem;
+  }
 
-      /* Large Screens */
-      .content h1 {
-        font-size: 3rem;
-      }
-
-      .content p {
-        font-size: 1.5rem;
-      }
-    }
-  
+  .content p {
+    font-size: 1.5rem;
+  }
+}

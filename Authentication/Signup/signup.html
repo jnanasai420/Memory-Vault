@@ -3,56 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In - Memory Vault</title>
-    <link rel="stylesheet" href="signup.css" />
+    <title>Sign Up - Memory Vault</title>
+    <link href="signup.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+      }
+      .form-container {
+        padding: 2rem;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .error-message {
+        color: red;
+        font-size: 0.875rem;
+      } */
+    </style>
   </head>
   <body>
-    <div class="signup-page">
+    <div class="signup-page container">
       <div class="form-container">
-        <h2>Sign In to Memory Vault</h2>
-        <form action="#" method="post">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Full Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-            required
-          />
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <input
-            type="password"
-            id="confirm-password"
-            name="confirm-password"
-            placeholder="Confirm Password"
-            required
-          />
-          <button type="submit" class="btn-submit" id="signupButton">
+        <h2 class="text-center mb-4">Sign Up to Memory Vault</h2>
+        <form id="signupForm">
+          <div class="mb-3">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              class="form-control"
+            />
+            <p class="error-message" id="name-error"></p>
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              class="form-control"
+            />
+            <p class="error-message" id="email-error"></p>
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              class="form-control"
+            />
+            <p class="error-message" id="password-error"></p>
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Confirm Password"
+              class="form-control"
+            />
+            <p class="error-message" id="confirm-password-error"></p>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" id="signupButton">
             Sign Up
           </button>
         </form>
-        <p>
-          Already have an account? <a href="../Login/login.html">Login here</a>
+        <p class="mt-3 text-center">
+          Already have an account?
+          <a href="../Login/login.html">Login here</a>
         </p>
       </div>
     </div>
-    <script src="signup.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
 
-    <!-- Add additional Firebase SDKs as needed -->
+    <script type="module" src="signup.js"></script>
   </body>
 </html>

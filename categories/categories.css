@@ -1,0 +1,15 @@
+/* Category styles */
+.category {
+  background: #f8f9fa;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+  .category {
+    width: 100%;
+  }
+}

@@ -9,24 +9,28 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <div class="login-page">
-      <div class="form-container">
+    <div class="login-page d-flex align-items-center min-vh-100">
+      <div class="form-container mx-auto">
         <h2>Login to Memory Vault</h2>
-        <form action="#" method="post">
+        <form id="loginForm">
+          <!-- Email Input -->
           <input
             type="email"
             id="email"
             name="email"
             placeholder="Email Address"
-            required
           />
+          <p id="emailError" class="text-danger"></p>
+
+          <!-- Password Input -->
           <input
             type="password"
             id="password"
             name="password"
             placeholder="Password"
-            required
           />
+          <p id="passwordError" class="text-danger"></p>
+
           <button type="submit" class="btn-submit">Login</button>
         </form>
         <p>
@@ -35,6 +39,6 @@
         </p>
       </div>
     </div>
-    <script src="login.js" defer></script>
+    <script src="login.js" type="module" defer></script>
   </body>
 </html>
