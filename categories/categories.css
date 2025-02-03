@@ -1,15 +1,45 @@
-/* Category styles */
-.category {
-  background: #f8f9fa;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 8px;
+body {
+  background-color: #f8f9fa;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  color: #343a40;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.memory-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
   text-align: center;
 }
 
-/* Responsive styling */
-@media (max-width: 576px) {
-  .category {
-    width: 100%;
-  }
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.text-muted {
+  font-size: 12px;
 }

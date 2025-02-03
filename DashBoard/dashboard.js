@@ -30,3 +30,7 @@ let about = document.getElementById("about");
 about.addEventListener("click", (e) => {
   location.href = "../About/about.html";
 });
+let browseMemories = document.getElementById("browseMemories");
+browseMemories.addEventListener("click", () => {
+  location.href = "../categories/categories.html";
+});

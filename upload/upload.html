@@ -4,46 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Vault Dashboard</title>
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      @media (max-width: 576px) {
+        .modal-dialog {
+          max-width: 90%;
+          margin: 1rem auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Navbar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Memory Vault</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="upload.html">Upload Media</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="view-media.html">View Media</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="logoutButton">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
-    <!-- Dashboard Content -->
     <div class="container mt-5">
       <div class="text-center mb-4">
         <h1>Welcome to Memory Vault!</h1>
@@ -51,34 +25,135 @@
       </div>
 
       <!-- Dashboard Cards -->
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
           <div class="card shadow-sm mb-4">
             <div class="card-body text-center">
               <h5 class="card-title">Upload Media</h5>
               <p class="card-text">
                 Upload your images and videos to keep them safe.
               </p>
-              <a href="upload.html" class="btn btn-primary">Go to Upload</a>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#uploadModal"
+              >
+                Upload Media
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
           <div class="card shadow-sm mb-4">
             <div class="card-body text-center">
               <h5 class="card-title">View Media</h5>
               <p class="card-text">
                 Browse and download your previously uploaded media files.
               </p>
-              <a href="view-media.html" class="btn btn-success">View Media</a>
+              <a href="../categories/categories.html" class="btn btn-success"
+                >View Media</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Upload Media Modal -->
+    <div
+      class="modal fade"
+      id="uploadModal"
+      tabindex="-1"
+      aria-labelledby="uploadModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uploadModalLabel">Upload New Memory</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="categoryName" class="form-label"
+                  >Category Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="categoryName"
+                  placeholder="Enter category name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="memoryName" class="form-label">Memory Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="memoryName"
+                  placeholder="Enter memory name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="imageUpload" class="form-label">Upload Image</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="imageUpload"
+                  accept="image/*"
+                />
+                <div class="mt-3 text-center">
+                  <img
+                    id="previewImage"
+                    src="#"
+                    alt="Image Preview"
+                    class="img-fluid d-none"
+                    style="max-height: 200px; max-width: 100%"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="memoryDate" class="form-label">Date</label>
+                <input type="date" class="form-control" id="memoryDate" />
+              </div>
+              <div class="mb-3">
+                <label for="memoryDescription" class="form-label"
+                  >Memory Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="memoryDescription"
+                  rows="3"
+                  placeholder="Enter memory description"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" id="uploadButton" class="btn btn-primary">
+              Upload
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.6/dist/sweetalert2.all.min.js"></script>
+
+    <script type="module" src="upload.js"></script>
   </body>
 </html>
