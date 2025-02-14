@@ -123,11 +123,7 @@ const fetchMemories = async (userId) => {
         memoryCard.innerHTML = `
           <div class="card shadow-sm">
               <img src="${memory.imageUrl}" class="card-img-top memory-image" alt="${memory.memoryName}" style="cursor: pointer;">
-              <div class="card-body">
-                  <h5 class="card-title">${memory.memoryName}</h5>
-                  <p class="text-muted">${memory.date}</p>
-                  <p class="card-text">${memory.description}</p>
-              </div>
+              
           </div>
         `;
 
